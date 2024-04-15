@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>terra/a.png</file>
+        <file>terra/b.png</file>
+        <file>terra/c.png</file>
+        <file>terra/d.png</file>
+        <file>terra/e.png</file>
+        <file>terra/f.png</file>
+    </qresource>
+</RCC>
