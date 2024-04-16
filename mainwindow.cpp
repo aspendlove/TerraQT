@@ -48,13 +48,6 @@ void MainWindow::changeMouthShape(MouthShape mouthShape) {
     }
     QString fullPath = terraDir + file;
 
-    QPixmap p(fullPath);
-    if (!ui->FaceZone->scene()) {
-        qDebug() << "No Scene!";
-        auto *scene = new QGraphicsScene(this);
-        ui->FaceZone->setScene(scene);
-    }
-    QPixmap scaled_img = p.scaled(this->width(), this->height(), Qt::KeepAspectRatio);
-    ui->FaceZone->scene()->clear();
-    ui->FaceZone->scene()->addPixmap(scaled_img);
+    QPixmap image(fullPath);
+    ui->Face->setPixmap(image);
 }

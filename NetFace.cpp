@@ -78,7 +78,9 @@ QString NetFace::recvAll(int clientSocket) {
         char buffer[1024] = {0};
         recv(clientSocket, buffer, sizeof(buffer), 0);
         message.append(buffer);
-        if (message.endsWith("\r\n\r\n")) {
+        if(message.contains("\r\n\r\n")) {
+            QStringList split = message.split("\r\n\r\n");
+            message = split[0];
             finished = true;
         }
     }
